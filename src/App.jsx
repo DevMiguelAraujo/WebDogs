@@ -1,13 +1,14 @@
 import { RouterProvider } from "react-router-dom";
-import "./App.css";
+import Header from "./components/header";
 import router from "./config_router/router";
+import "./App.css";
 
 function App() {
   return (
-    <>
-      <h1>Dogs Social Media</h1>
+    <section>
+      <Header/>
       <RouterProvider router={router} />
-    </>
+    </section>
   );
 }
 
