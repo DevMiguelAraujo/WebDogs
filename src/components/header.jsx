@@ -1,36 +1,22 @@
 import router from "../config_router/router";
 
-export default function Header() {
-  function NavClick(path) {
-    if (path === "Início") path = "";
-    router.navigate("/" + path);
+export default function Header({paths, children}) {
+  const keys = Object.keys(paths);
+  const values = Object.values(paths);
+  
+  if(!children){
+    children = 'Dogs EveryWhere'
   }
 
   return (
     <header>
-      <h1>Dogs Everywhere</h1>
+      <h1>{children}</h1>
       <nav>
-        <li
-          onClick={({ target }) => {
-            NavClick(target.innerText);
-          }}
-        >
-          Início
-        </li>
-        <li
-          onClick={({ target }) => {
-            NavClick(target.innerText);
-          }}
-        >
-          Procurar
-        </li>
-        <li
-          onClick={({ target }) => {
-            NavClick(target.innerText);
-          }}
-        >
-          Sobre
-        </li>
+        {keys.map((nomes, index) => (
+          <div key={nomes} onClick={() => router.navigate(values[index])}>
+            {nomes}
+          </div>
+        ))}
       </nav>
     </header>
   );
