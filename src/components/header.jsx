@@ -1,22 +1,20 @@
 import router from "../config_router/router";
 
-export default function Header({paths, children}) {
-  const keys = Object.keys(paths);
-  const values = Object.values(paths);
-  
-  if(!children){
-    children = 'Dogs EveryWhere'
-  }
-
+export default function Header({ links, children }) {
   return (
     <header>
-      <h1>{children}</h1>
+      <h1>{children ? children : "Dogs Everywhere"}</h1>
       <nav>
-        {keys.map((nomes, index) => (
-          <div key={nomes} onClick={() => router.navigate(values[index])}>
-            {nomes}
-          </div>
-        ))}
+        {links
+          ? Object.keys(links).map((nameLink) => (
+              <button
+                key={nameLink}
+                onClick={() => router.navigate(links[nameLink])}
+              >
+                {nameLink}
+              </button>
+            ))
+          : ""}
       </nav>
     </header>
   );

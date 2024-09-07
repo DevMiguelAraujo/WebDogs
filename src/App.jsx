@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   return (
     <section>
-      <Header paths={{Início: '/', Procurar: '/procurar', Sobre: '/sobre'}}>Dogs Everywhere</Header>
+      <Header links={{Início: '/', Procurar: '/procurar', Sobre: '/sobre'}}>Dogs Everywhere</Header>
       <RouterProvider router={router} />
     </section>
   );
