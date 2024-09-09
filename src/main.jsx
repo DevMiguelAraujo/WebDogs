@@ -1,14 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { Provider } from 'react-redux'
-import dogsStore from './store/configureStore.js'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+import { Provider } from "react-redux";
+import dogsStore from "./store/configureStore.js";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={dogsStore}>
-    <App />
+      <App />
     </Provider>
-  </StrictMode>,
-)
+  </StrictMode>
+);
