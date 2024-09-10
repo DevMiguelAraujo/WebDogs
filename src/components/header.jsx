@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import router from "../config_router/router";
 
 export default function Header({ links, children }) {
   const [namePage, setNamePage] = useState(location.href.split("5173").pop());
 
-  React.useEffect(() => {
-    console.log('namepage' + namePage);
-  }, [namePage]);
-
   return (
-    <header className="flex justify-between items-center px-4 h-20 bg-indigo-950">
+    <header className="sticky top-0 flex justify-between items-center px-4 h-20 bg-sky-700">
       <div>
         <h1 className="text-xl max-w-28 text-center">
           {children ? children : "Dogs Everywhere"}
@@ -24,7 +20,6 @@ export default function Header({ links, children }) {
                 onClick={() => {
                   router.navigate(links[nameLink])
                   setNamePage(links[nameLink])
-                  console.log(links[nameLink])
                 }}
               >
                 {nameLink}

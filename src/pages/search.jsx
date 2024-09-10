@@ -1,3 +1,3 @@
 export default function Search(){
-  return <h1>Eu sou a Search</h1>
+  return <h2>Eu sou a Search</h2>
 }
