@@ -2,11 +2,14 @@
 export default {
   content: ["./src/**/*.jsx"],
   theme: {
-    fontFamily: {
-      Inter: 'Inter'
+    extend: {
+      fontFamily: {
+        Inter: "Inter",
+      },
+      width: {
+        "90p": "90%",
+      },
     },
-    extend: {},
   },
   plugins: [],
-}
-
+};

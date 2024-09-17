@@ -6,16 +6,16 @@ import About from "../pages/about";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>
+    element: <Home />,
   },
   {
     path: "procurar",
-    element: <Search/>
+    element: <Search />,
   },
   {
     path: "sobre",
-    element: <About/>
-  }
+    element: <About />,
+  },
 ]);
 
-export default router
+export default router;

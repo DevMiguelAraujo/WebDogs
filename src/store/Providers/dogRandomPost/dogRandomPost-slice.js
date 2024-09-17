@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import fetchDogImage from "./getDogImage-Provider";
+import fetchDogImage from "./getRandomDogImage-provider";
 
 export const gettingDogsImage = createAsyncThunk(
   "dogsImg",
