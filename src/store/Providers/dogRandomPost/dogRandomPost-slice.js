@@ -13,15 +13,7 @@ const dogPostSlice = createSlice({
   name: "dogPost",
   initialState: {
     loading: false,
-    imgs: [
-      "https://images.dog.ceo/breeds/kombai/Kombai-indian-Dog.jpg",
-      "https://images.dog.ceo/breeds/malinois/n02105162_5680.jpg",
-      "https://images.dog.ceo/breeds/mastiff-indian/Indian_Mastiff.jpg",
-      "https://images.dog.ceo/breeds/kuvasz/n02104029_2150.jpg",
-      "https://images.dog.ceo/breeds/setter-gordon/n02101006_3667.jpg",
-      "https://images.dog.ceo/breeds/retriever-flatcoated/n02099267_3660.jpg",
-      "https://images.dog.ceo/breeds/hound-basset/n02088238_490.jpg",
-    ],
+    imgs: [],
   },
   reducers: {},
   extraReducers: (builder) => {

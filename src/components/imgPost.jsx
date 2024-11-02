@@ -1,9 +1,19 @@
 export default function ImgPost({ urlImg, name }) {
   return (
-    <div>
-      {name && <h2 className="text-2xl font-medium max-h-80">{name}</h2>}
+    <div
+      className="
+      flex flex-col max-w-md
+      "
+    >
+      <div className="text-2xl font-semibold flex justify-between p-4 rounded-t-lg bg-orange-300">
+        <h2>Raça: </h2>
+        <h2>{name}</h2>
+      </div>
       <picture>
-        <img className="w-full rounded-b-lg max-h-80 object-cover object-center" src={urlImg} />
+        <img
+          className="rounded-b-lg object-cover object-center min-w-72 max-h-96"
+          src={urlImg}
+        />
       </picture>
     </div>
   );

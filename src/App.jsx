@@ -4,10 +4,8 @@ import router from "./config_router/router";
 
 function App() {
   return (
-    <section className="bg-gray-900 min-h-screen font-Inter text-white">
-      <Header links={{ Início: "/", Procurar: "/procurar", Sobre: "/sobre" }}>
-        Dogs Everywhere
-      </Header>
+    <section className="bg-violet-100 min-h-screen font-Inter">
+      <Header links={{ Início: "/", Procurar: "/procurar", Sobre: "/sobre" }}/>
       <RouterProvider router={router} />
     </section>
   );

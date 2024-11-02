@@ -1,19 +1,21 @@
 export default function IntroductionBox({ title, introductionText, subTitle }) {
   return (
-    <div className="mt-8">
-      <h2 className="text-1xl font-medium">{title}</h2>
-      {subTitle && (
-        <h3 className="text-2xl font-medium text-amber-300">{subTitle}</h3>
-      )}
+    <section>
+      <div>
+        <h2 className="text-2xl font-medium">{title}</h2>
+        {subTitle && (
+          <h3 className="text-3xl font-bold mb-2 text-rose-500">{subTitle}</h3>
+        )}
+      </div>
       {introductionText && (
-        <section className="bg-gradient-to-r from-sky-700 p-4 rounded-b-lg">
-          <ul className="flex flex-col gap-4">
+        <div className="bg-violet-400 p-2">
+          <ul className="flex flex-col gap-2">
             {introductionText.map((paragraph) => (
               <li key={paragraph}>{paragraph}</li>
             ))}
           </ul>
-        </section>
+        </div>
       )}
-    </div>
+    </section>
   );
 }
